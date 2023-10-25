@@ -24,6 +24,6 @@ jobs:
           python scripts/find_manifests.py >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
         
-      - uses: azure/k8s-lint@3b7cb68584cd614174f4e2dad0b6d48dbf651ccc
+      - uses: azure/k8s-lint@main
         with:
           manifests: ${{ steps.manifest-files.outputs.manifests }}
